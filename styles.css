@@ -1,103 +1,182 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 .navbar {
-    color: white;
-    width: 100%;
-    height: 10vh;
-    height: calc(100vh-10px);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    position: fixed;
-    z-index: 99;
+  width: 100%;
+  height: 10vh;
+  height: calc(100vh-10px);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar .navitems {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .navbar .navitems li a {
-   color: inherit;
-
+  color: inherit;
 }
 
 .navbar .menu {
-  
-    display: none;
-    cursor: pointer;
+  color: yellow;
+  font-size: 40px;
+  display: none;
+  cursor: pointer;
 }
-main
-{
-    width: 100%;
-    height: 100%;
+#bars {
+  display: none;
+  user-select: none;
 }
+
+/* main */
+main {
+  width: 100%;
+  height: 100%;
+}
+/* section1 */
 .section1 {
-    width: 100%;
-    height: 100vh;
-    background-image: url(Assests/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(Assests/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-   
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.463);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.463);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    color: white;
+  color: white;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 10vw;
+  font-family: Times;
+}
+.content form {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.content form input {
+  width: 30vw;
+  height: 4vh;
+  border: none;
+  font-size: 1vw;
+  padding: 1px;
+  border-radius: 2px;
+}
+.content form button {
+  padding: 0.8vw;
+  background-color: #e94b50;
+  outline: none;
+  border: none;
+}
+/* section2 */
+.section2 {
+  width: 100%;
+  height: 100vh;
+}
+@media only screen and (max-width: 480px) {
+  .navbar .navitems {
+    display: none;
+  }
+  .logo {
+    padding: 10px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
+    justify-content: space-between;
+  }
+  #bars
+  {
+    display: block;
+    user-select: all;
+    cursor: pointer;
+  }
+  .content h1 {
+    font-size: 22vw;
+    font-family: Times;
 }
 
-.content h1
-{
-    font-size: 10vw;
-    font-family:  Times;
-}
-.content form
-{
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
-}
-.content form input
-{
-    width: 30vw;
+.content form input {
+    width: 56vw;
     height: 4vh;
     border: none;
-    font-size: 1vw;
+    font-size: 3vw;
     padding: 1px;
+    border-radius: 2px;
 }
-.content form  button
-{
-    padding: .8vw;
-    background-color: #E94B50;
+.content form button {
+    padding: 1.2vw;
+    background-color: #e94b50;
     outline: none;
     border: none;
-   
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 850px) {
+    .navbar .navitems {
+        display: none;
+      }
+      .logo {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      #bars
+      {
+        display: block;
+        user-select: all;
+        cursor: pointer;
+      }
+      .content h1 {
+        font-size: 22vw;
+        font-family: Times;
+    }
+    
+    .content form input {
+        width: 56vw;
+        height: 4vh;
+        border: none;
+        font-size: 3vw;
+        padding: 1px;
+        border-radius: 2px;
+    }
+    .content form button {
+        padding: 1.2vw;
+        background-color: #e94b50;
+        outline: none;
+        border: none;
+    }
 }
