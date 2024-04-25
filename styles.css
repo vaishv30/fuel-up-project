@@ -5,7 +5,9 @@
   list-style: none;
   text-decoration: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   width: 100%;
   height: 10vh;
@@ -77,7 +79,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .content h1 {
@@ -105,46 +106,317 @@ main {
 }
 /* section2 */
 .part-2 {
-    margin-top: -20vh;
-    display: flex;
-  
+  margin-top: -20vh;
+  display: flex;
+
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: aliceblue; */
+}
+.lft-part-2 {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lft-part-2 h1 {
+  font-size: 7vw;
+}
+
+.rght-part-2 {
+  width: 50%;
+  height: 200%;
+}
+.content-rght-part-2 {
+  margin-top: 75%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  opacity: 0;
+}
+.content-rght-part-2 h1 {
+  font-size: 3.5vw;
+}
+.content-rght-part-2 p {
+  width: 75%;
+  font-size: 1.2vw;
+  opacity: 0.6;
+}
+#experience {
+  width: 100%;
+  height: 300px;
+}
+
+#experience .container {
+  width: 100%;
+  height: 100%;
+}
+
+#experience .container {
+  background-image: url(https://paradiseislebeachresort.weebly.com/uploads/9/8/7/7/98771906/1341553789_orig.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.work_experience {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work_experience .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work_experience .box .numbers {
+  font-size: 40px;
+  color: white;
+}
+
+.work_experience .box .text {
+  font-size: 20px;
+  color: white;
+}
+
+.work_experience .box .img img {
+  width: 100px;
+  height: 70px;
+}
+
+.work_experience .box .img img {
+  object-fit: contain;
+}
+
+.service-container {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* background-color: aliceblue; */
+    padding: 20px;
   }
-  .lft-part-2 {
-    width: 50%;
-    height: 100vh;
+  a {
+    text-decoration: none;
+  }
+  .serive-title {
+    text-align: center;
+  
+    position: relative;
+  }
+  .serive-title h1 {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  .serive-title h1 span {
+    font-weight: 800;
+  }
+  .serive-title p {
+    color: grey;
+    font-size: 0.8rem;
+  }
+  /* .serive-title::before {
+    margin: 3rem;
+    content: "02";
+    position: absolute;
+    font-size: 3rem;
+    text-align: center;
+    color: grey;
+  } */
+  .service-feature {
+    padding: 40px 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .service-feature .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-  }
-  .lft-part-2 h1 {
-    font-size: 7vw;
   }
   
-  
-  .rght-part-2 {
-    width: 50%;
-    height: 200%;
+  .service-feature .col {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 0 10px 20px;
   }
-  .content-rght-part-2 {
-    margin-top: 75%;
   
+  .service-feature img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .service-content {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .service-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .service-desc {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(176, 176, 176);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  /* team container */
+.team-container {
+    margin-top: 20px;
+    display: flex;
+    background-image: url(Assests/back.jpg);
+    background-size: cover;
+    height: 600px;
+  }
+  .team-container img {
+    object-fit: contain;
+  }
+  .left-continer {
+    flex: 50%;
+    background-color: rgba(250, 192, 45, 0.92);
     display: flex;
     flex-direction: column;
-    gap: 4vh;
-    opacity: 0;
+    align-items: center;
   }
-  .content-rght-part-2 h1 {
-    font-size: 3.5vw;
+  .team-title {
+    margin-top: 120px;
   }
-  .content-rght-part-2 p {
-    width: 75%;
-    font-size: 1.2vw;
-    opacity: 0.6;
+  .team-title h1 {
+    font-size: 2rem;
+    font-weight: 100;
   }
+  .team-title h1 span {
+    font-weight: 900;
+  }
+  .team-title p {
+    font-size: 0.9rem;
+    color: rgb(131, 131, 131);
+    font-weight: 100;
+  }
+  .team-content {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .left-continer button {
+    margin-top: 120px;
+  
+    border: none;
+    background-color: #232323;
+    color: #ffc326;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .left-continer button a {
+    color: #ffc326;
+  }
+  .left-continer button:hover {
+    background-color: #ffc326;
+  }
+  .left-continer button a:hover {
+    color: black;
+  }
+  
+  .right-continer {
+    flex: 50%;
+    background-color: rgba(44, 42, 41, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .quote-title h1 {
+    margin-top: 120px;
+    font-size: 2rem;
+    color: white;
+  }
+  .quote-title h1 span {
+    color: #ffc326;
+  }
+  .quote-title p {
+    font-weight: 100;
+    color: white;
+    text-align: center;
+  }
+  .quotation {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .quotation input {
+    margin-top: 20px;
+    color: #ffffff;
+    height: 52px;
+    border-color: #b4b4b4;
+    background-color: transparent;
+    border-radius: 0;
+    border-width: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: none;
+    margin: 20px;
+    width: calc(50% - 70px);
+  }
+  
+  input.Message {
+    width: 80%;
+  }
+  
+  input[type="text" i] {
+    writing-mode: horizontal-tb !important;
+    padding-block: 1px;
+    padding-inline: 2px;
+  }
+  .quotationform button {
+    border: none;
+    background-color: #ffc326;
+    color: #232323;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  .quotationform {
+      text-align: center;
+    }
+  .quotationform button a {
+    color: #232323;
+  }
+  .quotationform button:hover {
+    background-color: #232323;
+  }
+  
+  .quotationform button:hover {
+      background-color: #232323;
+      color: #ffc326;
+  }
+  .quotation input:focus {
+      border-color: #ffc326;
+      outline: none; 
+      box-shadow: 0 0 5px rgba(255, 195, 38, 0.5); 
+    }
 
 @media only screen and (max-width: 480px) {
   .navbar .navitems {
@@ -156,8 +428,7 @@ main {
     display: flex;
     justify-content: space-between;
   }
-  #bars
-  {
+  #bars {
     display: block;
     user-select: all;
     cursor: pointer;
@@ -165,56 +436,62 @@ main {
   .content h1 {
     font-size: 22vw;
     font-family: Times;
-}
+  }
 
-.content form input {
+  .content form input {
     width: 56vw;
     height: 4vh;
     border: none;
     font-size: 3vw;
     padding: 1px;
     border-radius: 2px;
-}
-.content form button {
+  }
+  .content form button {
     padding: 1.2vw;
     background-color: #e94b50;
     outline: none;
     border: none;
+  }
 }
+footer
+{
+    padding: 10px;
+    text-align: center;
+    background-color: #000;
+    color: #ffffff51;
 }
 @media only screen and (min-width: 480px) and (max-width: 850px) {
-    .navbar .navitems {
-        display: none;
-      }
-      .logo {
-        padding: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-      #bars
-      {
-        display: block;
-        user-select: all;
-        cursor: pointer;
-      }
-      .content h1 {
-        font-size: 22vw;
-        font-family: Times;
-    }
-    
-    .content form input {
-        width: 56vw;
-        height: 4vh;
-        border: none;
-        font-size: 3vw;
-        padding: 1px;
-        border-radius: 2px;
-    }
-    .content form button {
-        padding: 1.2vw;
-        background-color: #e94b50;
-        outline: none;
-        border: none;
-    }
+  .navbar .navitems {
+    display: none;
+  }
+  .logo {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #bars {
+    display: block;
+    user-select: all;
+    cursor: pointer;
+  }
+  .content h1 {
+    font-size: 22vw;
+    font-family: Times;
+  }
+
+  .content form input {
+    width: 56vw;
+    height: 4vh;
+    border: none;
+    font-size: 3vw;
+    padding: 1px;
+    border-radius: 2px;
+  }
+  .content form button {
+    padding: 1.2vw;
+    background-color: #e94b50;
+    outline: none;
+    border: none;
+  }
 }
