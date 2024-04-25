@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar {
+    color: white;
+    width: 100%;
+    height: 10vh;
+    height: calc(100vh-10px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+
+.navbar .navitems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.navbar .navitems li a {
+   color: inherit;
+
+}
+
+.navbar .menu {
+  
+    display: none;
+    cursor: pointer;
+}
+main
+{
+    width: 100%;
+    height: 100%;
+}
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Assests/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.463);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.content h1
+{
+    font-size: 10vw;
+    font-family:  Times;
+}
+.content form
+{
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+}
+.content form input
+{
+    width: 30vw;
+    height: 4vh;
+    border: none;
+    font-size: 1vw;
+    padding: 1px;
+}
+.content form  button
+{
+    padding: .8vw;
+    background-color: #E94B50;
+    outline: none;
+    border: none;
+   
+}
