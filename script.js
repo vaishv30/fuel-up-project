@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 var tl4 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".part-4",
+      trigger: ".part-2",
       start: "50% 50%",
       end: "200% 50%",
       pin: true,
@@ -24,7 +24,14 @@ var tl4 = gsap.timeline({
     },
   });
   tl4.to(
-    ".rght-part-4",
+    ".navbar",
+    {
+     color:"black",
+    },
+    "sct-1"
+  );
+  tl4.to(
+    ".rght-part-2",
     {
       marginTop: "-15%",
     },
