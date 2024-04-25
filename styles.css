@@ -106,7 +106,6 @@ main {
 }
 /* section2 */
 .part-2 {
-  margin-top: -20vh;
   display: flex;
 
   width: 100%;
@@ -199,29 +198,29 @@ main {
 }
 
 .service-container {
-    width: 100%;
-    padding: 20px;
-  }
-  a {
-    text-decoration: none;
-  }
-  .serive-title {
-    text-align: center;
-  
-    position: relative;
-  }
-  .serive-title h1 {
-    font-weight: 400;
-    font-size: 2rem;
-  }
-  .serive-title h1 span {
-    font-weight: 800;
-  }
-  .serive-title p {
-    color: grey;
-    font-size: 0.8rem;
-  }
-  /* .serive-title::before {
+  width: 100%;
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+}
+.serive-title {
+  text-align: center;
+
+  position: relative;
+}
+.serive-title h1 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.serive-title h1 span {
+  font-weight: 800;
+}
+.serive-title p {
+  color: grey;
+  font-size: 0.8rem;
+}
+/* .serive-title::before {
     margin: 3rem;
     content: "02";
     position: absolute;
@@ -229,194 +228,202 @@ main {
     text-align: center;
     color: grey;
   } */
-  .service-feature {
-    padding: 40px 0;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .service-feature .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .service-feature .col {
-    flex: 0 0 calc(33.33% - 20px);
-    margin: 0 10px 20px;
-  }
-  
-  .service-feature img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .service-content {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .service-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .service-desc {
-    text-align: center;
-    font-size: 14px;
-    color: rgb(176, 176, 176);
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  /* team container */
+.service-feature {
+  padding: 40px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.service-feature .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-feature .col {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 0 10px 20px;
+}
+
+.service-feature img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.service-content {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.service-desc {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(176, 176, 176);
+  max-width: 300px;
+  margin: 0 auto;
+}
+/* team container */
 .team-container {
-    margin-top: 20px;
-    display: flex;
-    background-image: url(Assests/back.jpg);
-    background-size: cover;
-    height: 600px;
-  }
-  .team-container img {
-    object-fit: contain;
-  }
-  .left-continer {
-    flex: 50%;
-    background-color: rgba(250, 192, 45, 0.92);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .team-title {
-    margin-top: 120px;
-  }
-  .team-title h1 {
-    font-size: 2rem;
-    font-weight: 100;
-  }
-  .team-title h1 span {
-    font-weight: 900;
-  }
-  .team-title p {
-    font-size: 0.9rem;
-    color: rgb(131, 131, 131);
-    font-weight: 100;
-  }
-  .team-content {
-    margin-top: 120px;
+  margin-top: 20px;
+  display: flex;
+  background-image: url(Assests/back.jpg);
+  background-size: cover;
+  height: 600px;
+}
+.team-container img {
+  object-fit: contain;
+}
+.left-continer {
+  flex: 50%;
+  background-color: rgba(250, 192, 45, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-title {
+  margin-top: 120px;
+}
+.team-title h1 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.team-title h1 span {
+  font-weight: 900;
+}
+.team-title p {
+  font-size: 0.9rem;
+  color: rgb(131, 131, 131);
+  font-weight: 100;
+}
+.team-content {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 1rem;
+}
+.left-continer button {
+  margin-top: 120px;
+
+  border: none;
+  background-color: #232323;
+  color: #ffc326;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.left-continer button a {
+  color: #ffc326;
+}
+.left-continer button:hover {
+  background-color: #ffc326;
+}
+.left-continer button a:hover {
+  color: black;
+}
+
+.right-continer {
+  flex: 50%;
+  background-color: rgba(44, 42, 41, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.quote-title h1 {
+  margin-top: 120px;
+  font-size: 2rem;
+  color: white;
+}
+.quote-title h1 span {
+  color: #ffc326;
+}
+.quote-title p {
+  font-weight: 100;
+  color: white;
+  text-align: center;
+}
+.quotation {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quotation input {
+  margin-top: 20px;
+  color: #ffffff;
+  height: 52px;
+  border-color: #b4b4b4;
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 1px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: none;
+  margin: 20px;
+  width: calc(50% - 70px);
+}
+
+input.Message {
+  width: 80%;
+}
+
+input[type="text" i] {
+  writing-mode: horizontal-tb !important;
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+.quotationform button {
+  border: none;
+  background-color: #ffc326;
+  color: #232323;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.quotationform {
+  text-align: center;
+}
+.quotationform button a {
+  color: #232323;
+}
+.quotationform button:hover {
+  background-color: #232323;
+}
+
+.quotationform button:hover {
+  background-color: #232323;
+  color: #ffc326;
+}
+.quotation input:focus {
+  border-color: #ffc326;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 195, 38, 0.5);
+}
+footer {
+    padding: 10px;
     text-align: center;
-    font-size: 1rem;
+    background-color: #000;
+    color: #ffffff51;
+    width: 100%;
+    position: fixed;
   }
-  .left-continer button {
-    margin-top: 120px;
-  
-    border: none;
-    background-color: #232323;
-    color: #ffc326;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  .left-continer button a {
-    color: #ffc326;
-  }
-  .left-continer button:hover {
-    background-color: #ffc326;
-  }
-  .left-continer button a:hover {
-    color: black;
-  }
-  
-  .right-continer {
-    flex: 50%;
-    background-color: rgba(44, 42, 41, 0.92);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .quote-title h1 {
-    margin-top: 120px;
-    font-size: 2rem;
-    color: white;
-  }
-  .quote-title h1 span {
-    color: #ffc326;
-  }
-  .quote-title p {
-    font-weight: 100;
-    color: white;
-    text-align: center;
-  }
-  .quotation {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .quotation input {
-    margin-top: 20px;
-    color: #ffffff;
-    height: 52px;
-    border-color: #b4b4b4;
-    background-color: transparent;
-    border-radius: 0;
-    border-width: 1px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 13px;
-    padding-bottom: 15px;
-    font-size: 16px;
-    font-weight: 700;
-    box-shadow: none;
-    margin: 20px;
-    width: calc(50% - 70px);
-  }
-  
-  input.Message {
-    width: 80%;
-  }
-  
-  input[type="text" i] {
-    writing-mode: horizontal-tb !important;
-    padding-block: 1px;
-    padding-inline: 2px;
-  }
-  .quotationform button {
-    border: none;
-    background-color: #ffc326;
-    color: #232323;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  .quotationform {
-      text-align: center;
-    }
-  .quotationform button a {
-    color: #232323;
-  }
-  .quotationform button:hover {
-    background-color: #232323;
-  }
-  
-  .quotationform button:hover {
-      background-color: #232323;
-      color: #ffc326;
-  }
-  .quotation input:focus {
-      border-color: #ffc326;
-      outline: none; 
-      box-shadow: 0 0 5px rgba(255, 195, 38, 0.5); 
-    }
 
 @media only screen and (max-width: 480px) {
   .navbar .navitems {
@@ -452,14 +459,86 @@ main {
     outline: none;
     border: none;
   }
+  .part-2 {
+    display: flex;
+
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background-color: aliceblue; */
+  }
+  .lft-part-2 {
+    padding: 2vw;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .lft-part-2 h1 {
+    font-size: 10vw;
+  }
+
+  .rght-part-2 {
+    padding: 20vw 15vw;
+
+    width: 100%;
+
+    height: 200%;
+  }
+  .content-rght-part-2 h1 {
+    font-size: 8.5vw;
+  }
+  .content-rght-part-2 p {
+    width: 100%;
+    font-size: 3.2vw;
+    opacity: 0.6;
+  }
+  .content-rght-part-2 {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    opacity: 0;
+  }
+  .work_experience .box .img img {
+    width: 20vw;
+    height: 10vh;
 }
-footer
-{
-    padding: 10px;
-    text-align: center;
-    background-color: #000;
-    color: #ffffff51;
+.work_experience .box .numbers {
+    font-size: 7vw;
+    color: white;
 }
+.work_experience .box .text {
+    font-size: 3vw;
+    color: white;
+}
+.service-feature .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+   
+   
+    height: 600px;
+    padding: 2;
+}
+.left-continer {
+    flex: 50%;
+    background-color: rgba(250, 192, 45, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+}
+
 @media only screen and (min-width: 480px) and (max-width: 850px) {
   .navbar .navitems {
     display: none;
@@ -494,4 +573,21 @@ footer
     outline: none;
     border: none;
   }
+  .team-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+   
+   
+    height: 600px;
+    padding: 2;
+}
+.left-continer {
+    flex: 50%;
+    background-color: rgba(250, 192, 45, 0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
 }

@@ -111,38 +111,37 @@ valuedisplays.forEach((valuedisplay) => {
 document.addEventListener("DOMContentLoaded", function () {
     const services = [
         {
-          title: "Car Towing",
-          description: "Duis laboris ball tip jowl sed. Drumstick leberkas tenderloin swine laborum cupim bacon ipsum jowl meatball t-bone.",
-          image: "Assests/p.png",
+            title: "Car Towing",
+            description: "Need a hand with your vehicle? Our expert team is here to provide seamless car towing services. Whether you're stuck on the bustling streets of Mumbai or the serene roads of Kerala, we'll swiftly tow your car to safety, ensuring minimal hassle for you.",
+            image: "Assests/p.png",
         },
         {
-          title: "Roadside Assistance",
-          description: "Pork chop tenderloin brisket. Capicola tri-tip sausage alcatra leberkas, beef ribs rump short loin. Filet mignon t-bone doner cow.",
-          image: "Assests/accident.png",
-        },
-        {
-          title: "Vehicle Recovery",
-          description: "Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.",
-          image: "Assests/fire.png",
+            title: "Roadside Assistance",
+            description: "From the bustling city roads to the quiet countryside, our roadside assistance is just a call away. Whether you need a tire change, a jump start, or fuel delivery, our efficient team will reach you promptly, providing reliable support to get you back on the road in no time.",
+            image: "Assests/accident.png",
         },
         {
             title: "Vehicle Recovery",
-            description: "Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.",
+            description: "Has your vehicle met with an unexpected mishap? Our vehicle recovery service is here to lend a helping hand. With our skilled professionals and state-of-the-art equipment, we'll recover your vehicle from any situation, ensuring minimal disruption to your journey.",
+            image: "Assests/fire.png",
+        },
+        {
+            title: "Vehicle Recovery",
+            description: "From the bustling city roads to the quiet countryside, our roadside assistance is just a call away. Whether you need a tire change, a jump start, or fuel delivery, our efficient team will reach you promptly, providing reliable support to get you back on the road in no time.",
             image: "Assests/motocycle.png",
-          },
-          {
+        },
+        {
             title: "Vehicle Recovery",
-            description: "Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.",
+            description: "Has your vehicle met with an unexpected mishap? Our vehicle recovery service is here to lend a helping hand. With our skilled professionals and state-of-the-art equipment, we'll recover your vehicle from any situation, ensuring minimal disruption to your journey.",
             image: "Assests/flood.png",
-          },
-          {
+        },
+        {
             title: "Vehicle Recovery",
-            description: "Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.",
+            description: "Has your vehicle met with an unexpected mishap? Our vehicle recovery service is here to lend a helping hand. With our skilled professionals and state-of-the-art equipment, we'll recover your vehicle from any situation, ensuring minimal disruption to your journey.",
             image: "Assests/hail.png",
-          },
-     
-      ];
-      
+        },
+    ];
+    
     const serviceRow = document.getElementById("serviceRow");
 
     services.forEach(service => {
