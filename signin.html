@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form Validation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='validate.js'></script>
+    <style>
+        .center {
+  padding: 30px 25px 30px 25px;
+  border: 3px solid rgb(15, 15, 15);
+  text-align: center;
+}
+.centerlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2%;
+}
+.centerlogo img{
+    border-radius: 50%;
+}
+body{
+    background-color:rgb(241, 239, 235);
+    justify-content:baseline;
+}
+    </style>
+</head>
+
+<body>
+    <div class="centerlogo">
+        <img src="fueluplogo.jpeg" width="200" height="200" style="align-items: center;">
+
+    </div>
+    <div class="center">
+        <h3>Sign In</h3>
+        <form onsubmit="return validate()" action="message.html">
+            <label>USERNAME</label>
+            <input type="text" id="username" placeholder="Enter Username"><br><br>
+            <label> PASSWORD</label>
+            <input type="text" id="password" placeholder="Enter password"><br><br>
+        <div class="pyp">
+            <button><a href="index.html">SUBMIT</a></button><br> <br>
+        </div>
+        
+
+        </form>
+        <form onsubmit="return matchpass()" action="forgot.html">
+            <div>
+                <button> FORGOT PASSWORD ?</button>
+            </div><br>
+        </form>
+
+        <form action="signup.html">
+            <div>
+                <button> NEW USER ? SIGN UP.</button>
+            </div>
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
