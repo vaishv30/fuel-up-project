@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ea7Ol6zaawnQ6t1inC1a9QB9-vgtZ74&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
-    
+    <nav class="navbar">
+        <ul class="navitems ">
+            <li><a href="./index1.html">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#service">SERVICES</a></li>
+        </ul>
+        <div class="logo">
+            <div class="">
+                <i class="fa-solid fa-gas-pump" style="color: #FFD43B;"></i> Up
+            </div>
+            <i class="fa-solid fa-bars" id="bars"></i>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="navitems">
+            <li><a href="#contact">CONTACT US</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><button onclick="getLocation()">Get Location</button></li>
+        </ul>
+
+
+    </nav>
+
+
+    <div class="section1">
+        <div id="map"></div>
+        <div class="emergncy">
+            <button onclick="displayworker('helper')"><i class="fa-regular fa-phone"></i>Need Helper</button>
+            <button onclick="displayworker('towing')"><i class="fa-regular fa-phone"></i>Need Towing</button>
+            <button onclick="displayworker('tanker')"><i class="fa-regular fa-phone"></i>Need Fuel Tanker</button>
+            <button onclick="displayworker('service')"><i class="fa-regular fa-phone"></i>Need Mobile Service</button>
+        </div>
+    </div>
+    <div id="display"></div>
+
+
+
+
+
+
+<script src="workerlist.js">
+      
+</script>
+    <script>
+        let works;
+        let locationData;
+        // maps ka part
+        function add() {
+          locationData = localStorage.getItem("userLocation");
+
+       
+            works=JSON.stringify(workers);
+            
+            const mapContainer = document.getElementById('map');
+            const mapURL = `https://www.google.com/maps/embed/v1/search?q=${locationData.areaName}+bangalore+near+petrol+station&key=AIzaSyAXL00iAw_hVkfvmzrodGl7-v1kA9sTno0`;
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', mapURL);
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '100%');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('style', 'border:1px;');
+            mapContainer.innerHTML = '';
+            mapContainer.appendChild(iframe);
+        
+        }
+        add();
+        // maps ka parts
+
+
+        // worker list ka parts
+        function displayworker(value) {
+            const filteredWorkers = workers.filter(worker => worker.occupation === value );
+ 
+            const display = document.getElementById("display");
+            const table = document.createElement("table");
+            const headerRow = document.createElement("tr");
+            const nameHeader = document.createElement("th");
+            const contactHeader = document.createElement("th");
+            const imageHeader = document.createElement("th");
+
+            nameHeader.textContent = "Name";
+            contactHeader.textContent = "Contact Number";
+            imageHeader.textContent = "Image";
+
+            headerRow.appendChild(nameHeader);
+            headerRow.appendChild(contactHeader);
+            headerRow.appendChild(imageHeader);
+            table.appendChild(headerRow);
+
+            filteredWorkers.forEach(worker => {
+                const row = document.createElement("tr");
+                const nameCell = document.createElement("td");
+                const contactCell = document.createElement("td");
+                const imageCell = document.createElement("td");
+
+                nameCell.textContent = worker.name;
+                contactCell.textContent = worker.contactNumber;
+
+                const image = document.createElement("img");
+                image.src = worker.imageUrl;
+                image.alt = worker.name;
+                image.style.width = "50px"; 
+
+                imageCell.appendChild(image);
+
+                row.appendChild(nameCell);
+                row.appendChild(contactCell);
+                row.appendChild(imageCell);
+                row.addEventListener("click", () => {
+                    
+                    window.location.href = `tel:${worker.contactNumber}`;
+                });
+
+                table.appendChild(row);
+            });
+
+            display.innerHTML = ''; 
+            display.appendChild(table);
+        }
+  
+
+    </script>
 </body>
+
 </html>
