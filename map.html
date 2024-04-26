@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar">
         <ul class="navitems ">
-            <li><a href="./index1.html">HOME</a></li>
+            <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT US</a></li>
             <li><a href="#service">SERVICES</a></li>
         </ul>
@@ -24,10 +24,8 @@
             </div>
             <i class="fa-solid fa-bars" id="bars"></i>
         </div>
-        <div class="menu">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="navitems">
+
+        <ul class="navitems" id="navitemspart-2">
             <li><a href="#contact">CONTACT US</a></li>
             <li><a href="#experience">EXPERIENCE</a></li>
             <li><button onclick="getLocation()">Get Location</button></li>
@@ -35,6 +33,7 @@
 
 
     </nav>
+    <main>
 
 
     <div class="section1">
@@ -47,6 +46,7 @@
         </div>
     </div>
     <div id="display"></div>
+</main>
 
 
 
@@ -132,6 +132,25 @@
             display.innerHTML = ''; 
             display.appendChild(table);
         }
+        const bars = document.getElementById("bars");
+        const navitems = document.querySelector(".navbar .navitems");
+        const navbar = document.querySelector(".navbar");
+        const nav2 = document.getElementById("navitemspart-2");
+
+        bars.addEventListener("click", () => {
+            if (navitems.style.display === "flex") {
+                navitems.style.display = "none";
+                navbar.style.height = "0";
+                nav2.style.display="none";
+                navbar.classList.remove("open"); 
+            } else {
+                navitems.style.display = "flex";
+                navitems.style.color = "black";
+                navbar.style.height = "50vh";
+                nav2.style.display="flex";
+                navbar.classList.add("open"); 
+            }
+        });
   
 
     </script>

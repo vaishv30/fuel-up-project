@@ -120,14 +120,128 @@ img {
   margin: 0 auto;
 }
 
-
-@media only screen and  (max-width: 850px) {
+@media only screen and (max-width: 480px) {
   .emergncy {
     margin-top: 20px;
     display: flex;
-    gap: 10px;
     flex-direction: column;
+    position: absolute;
+    bottom: 10%;
+    gap: 10px;
+  
     align-items: center;
     justify-content: space-evenly;
+}
+#map {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 4vw;
+  position: relative;
+  height: 0;
+}
+.navbar.open {
+  position: fixed;
+  background-color: white;
+  color: black;
+  z-index: 1;
+}
+
+.navbar .navitems {
+  position: absolute;
+
+  top: 0;
+  margin: 60px;
+
+  color: black;
+  display: none;
+  gap: 20px;
+  flex-direction: column;
+}
+#navitemspart-2 {
+  top: 45%;
+  /* display: none; */
+}
+#bars {
+  display: block;
+  user-select: all;
+}
+.logo {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  color: #000;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 850px) {
+  .emergncy {
+    margin-top: 20px;
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    gap: 10px;
+  
+    align-items: center;
+    justify-content: space-evenly;
+}
+#map {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 4vw;
+  position: relative;
+  height: 0;
+}
+.navbar.open {
+  position: fixed;
+  background-color: white;
+  color: black;
+  z-index: 1;
+}
+
+.navbar .navitems {
+  position: absolute;
+
+  top: 0;
+  margin: 60px;
+
+  color: black;
+  display: none;
+  gap: 20px;
+  flex-direction: column;
+}
+#navitemspart-2 {
+  top: 45%;
+  /* display: none; */
+}
+#bars {
+  display: block;
+  user-select: all;
+}
+.logo {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  color: #000;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
 }
 }
