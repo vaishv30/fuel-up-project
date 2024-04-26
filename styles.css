@@ -32,7 +32,22 @@ html {
 .navbar .navitems li a {
   color: inherit;
 }
-
+.navitems li button
+{
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid yellow;
+  color: white;
+  font-size: .8rem;
+  background-color: transparent;
+}
+.navitems li button:hover
+{
+  background-color: yellow;
+  color: #000;
+  border-color: white;
+}
 .navbar .menu {
   color: yellow;
   font-size: 40px;
