@@ -24,10 +24,8 @@
             </div>
             <i class="fa-solid fa-bars" id="bars"></i>
         </div>
-        <div class="menu">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="navitems">
+
+        <ul class="navitems" id="navitemspart-2">
             <li><a href="#contact">CONTACT US</a></li>
             <li><a href="#experience">EXPERIENCE</a></li>
             <li><button onclick="getLocation()">Get Location</button></li>
@@ -41,10 +39,10 @@
             <div class="overlay">
                 <div class="content">
                     <h1>Fuel up</h1>
-                    <form class="form-input">
-                        <input type="text" placeholder="Enter your location" name="areaname" required><button type="submit"
-                            onclick="add()">Search</button>
-                    </form>
+                    <div class="form-input">
+                        <input type="text" placeholder="Enter your location" name="areaname" required><button
+                            type="submit" onclick="add()">Search</button>
+                    </div>
 
                 </div>
                 <div id="map"></div>
@@ -173,6 +171,25 @@
         let latitude;
         let longitude;
         let locationData;
+        const bars = document.getElementById("bars");
+        const navitems = document.querySelector(".navbar .navitems");
+        const navbar = document.querySelector(".navbar");
+        const nav2 = document.getElementById("navitemspart-2");
+
+        bars.addEventListener("click", () => {
+            if (navitems.style.display === "flex") {
+                navitems.style.display = "none";
+                navbar.style.height = "0";
+                nav2.style.display="none";
+                navbar.classList.remove("open"); 
+            } else {
+                navitems.style.display = "flex";
+                navitems.style.color = "black";
+                navbar.style.height = "40vh";
+                nav2.style.display="flex";
+                navbar.classList.add("open"); 
+            }
+        });
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -190,7 +207,7 @@
             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
                 .then(response => response.json())
                 .then(data => {
-                    
+
                     const areaName = data.localityInfo.administrative[5].name;
 
                     locationData = {
@@ -210,8 +227,8 @@
 
 
         function add() {
-    window.location.href = "./map.html";
-}
+            window.location.href = "./map.html";
+        }
 
 
     </script>

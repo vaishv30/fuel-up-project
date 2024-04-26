@@ -32,18 +32,16 @@ html {
 .navbar .navitems li a {
   color: inherit;
 }
-.navitems li button
-{
+.navitems li button {
   padding: 10px 20px;
   border-radius: 10px;
   outline: none;
   border: 1px solid yellow;
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
   background-color: transparent;
 }
-.navitems li button:hover
-{
+.navitems li button:hover {
   background-color: yellow;
   color: #000;
   border-color: white;
@@ -100,12 +98,12 @@ main {
   font-size: 10vw;
   font-family: Times;
 }
-.content form {
+.content .form-input {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-.content form input {
+.content .form-input input {
   width: 30vw;
   height: 4vh;
   border: none;
@@ -113,7 +111,7 @@ main {
   padding: 1px;
   border-radius: 2px;
 }
-.content form button {
+.content .form-input button {
   padding: 0.8vw;
   background-color: #e94b50;
   outline: none;
@@ -432,23 +430,57 @@ input[type="text" i] {
   box-shadow: 0 0 5px rgba(255, 195, 38, 0.5);
 }
 footer {
-    padding: 10px;
-    text-align: center;
-    background-color: #000;
-    color: #ffffff51;
-    width: 100%;
-    position: fixed;
-  }
+  padding: 10px;
+  text-align: center;
+  background-color: #000;
+  color: #ffffff51;
+  width: 100%;
+  position: fixed;
+}
 
 @media only screen and (max-width: 480px) {
+  main {
+    position: relative;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 4vw;
+    position: relative;
+    height: 0;
+  }
+  .navbar.open {
+    position: fixed;
+    background-color: white;
+    color: black;
+    z-index: 1;
+  }
+
   .navbar .navitems {
+    position: absolute;
+
+    top: 0;
+    margin: 60px;
+
+    color: black;
     display: none;
+    gap: 20px;
+    flex-direction: column;
+  }
+  #navitemspart-2 {
+    top: 36%;
+    /* display: none; */
   }
   .logo {
     padding: 10px;
     width: 100%;
     display: flex;
+    position: absolute;
+    color: #000;
     justify-content: space-between;
+    top: 0;
+    left: 0;
   }
   #bars {
     display: block;
@@ -460,7 +492,7 @@ footer {
     font-family: Times;
   }
 
-  .content form input {
+  .content .form-input input {
     width: 56vw;
     height: 4vh;
     border: none;
@@ -468,7 +500,7 @@ footer {
     padding: 1px;
     border-radius: 2px;
   }
-  .content form button {
+  .content .form-input button {
     padding: 1.2vw;
     background-color: #e94b50;
     outline: none;
@@ -520,49 +552,71 @@ footer {
   .work_experience .box .img img {
     width: 20vw;
     height: 10vh;
-}
-.work_experience .box .numbers {
+  }
+  .work_experience .box .numbers {
     font-size: 7vw;
     color: white;
-}
-.work_experience .box .text {
+  }
+  .work_experience .box .text {
     font-size: 3vw;
     color: white;
-}
-.service-feature .row {
+  }
+  .service-feature .row {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-}
-.team-container {
+  }
+  .team-container {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-   
-   
+
     height: 600px;
     padding: 2;
-}
-.left-continer {
+  }
+  .left-continer {
     flex: 50%;
     background-color: rgba(250, 192, 45, 0.92);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-}
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 850px) {
+  .navbar.open {
+    position: fixed;
+    background-color: white;
+    color: black;
+    z-index: 1;
+  }
+
   .navbar .navitems {
+    position: absolute;
+
+    top: 0;
+    margin: 60px;
+
+    color: black;
     display: none;
+    gap: 20px;
+    flex-direction: column;
+  }
+  #navitemspart-2 {
+    top: 36%;
+    /* display: none; */
   }
   .logo {
     padding: 10px;
     width: 100%;
     display: flex;
+    position: absolute;
+    color: #000;
     justify-content: space-between;
+    top: 0;
+    left: 0;
   }
   #bars {
     display: block;
@@ -574,7 +628,7 @@ footer {
     font-family: Times;
   }
 
-  .content form input {
+  .content .form-input input {
     width: 56vw;
     height: 4vh;
     border: none;
@@ -582,7 +636,7 @@ footer {
     padding: 1px;
     border-radius: 2px;
   }
-  .content form button {
+  .content .form-input button {
     padding: 1.2vw;
     background-color: #e94b50;
     outline: none;
@@ -592,17 +646,16 @@ footer {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-   
-   
+
     height: 600px;
     padding: 2;
-}
-.left-continer {
+  }
+  .left-continer {
     flex: 50%;
     background-color: rgba(250, 192, 45, 0.92);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-}
+  }
 }
