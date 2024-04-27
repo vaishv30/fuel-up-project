@@ -202,13 +202,15 @@
         function showPosition(position) {
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
+        
 
 
             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);
 
-                    const areaName = data.localityInfo.administrative[5].name;
+                    const areaName = data.localityInfo.administrative[4].name;
 
                     locationData = {
                         latitude: latitude,

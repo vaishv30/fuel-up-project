@@ -14,7 +14,7 @@
 <body>
     <nav class="navbar">
         <ul class="navitems ">
-            <li><a href="#home">HOME</a></li>
+            <li><a href="./index1.html">HOME</a></li>
             <li><a href="#about">ABOUT US</a></li>
             <li><a href="#service">SERVICES</a></li>
         </ul>
@@ -36,36 +36,39 @@
     <main>
 
 
-    <div class="section1">
-        <div id="map"></div>
-        <div class="emergncy">
-            <button onclick="displayworker('helper')"><i class="fa-regular fa-phone"></i>Need Helper</button>
-            <button onclick="displayworker('towing')"><i class="fa-regular fa-phone"></i>Need Towing</button>
-            <button onclick="displayworker('tanker')"><i class="fa-regular fa-phone"></i>Need Fuel Tanker</button>
-            <button onclick="displayworker('service')"><i class="fa-regular fa-phone"></i>Need Mobile Service</button>
+        <div class="section1">
+            <div id="map"></div>
+            <div class="emergncy">
+                <button onclick="displayworker('helper')"><i class="fa-regular fa-phone"></i>Need Helper</button>
+                <button onclick="displayworker('towing')"><i class="fa-regular fa-phone"></i>Need Towing</button>
+                <button onclick="displayworker('tanker')"><i class="fa-regular fa-phone"></i>Need Fuel Tanker</button>
+                <button onclick="displayworker('service')"><i class="fa-regular fa-phone"></i>Need Mobile
+                    Service</button>
+            </div>
         </div>
-    </div>
-    <div id="display"></div>
-</main>
+        <div id="display"></div>
+    </main>
 
 
 
 
 
 
-<script src="workerlist.js">
-      
-</script>
+    <script src="workerlist.js">
+
+    </script>
     <script>
         let works;
         let locationData;
         // maps ka part
         function add() {
-          locationData = localStorage.getItem("userLocation");
+            var locationData = JSON.parse(localStorage.getItem("userLocation"));
+            console.log(locationData["areaName"]);
 
-       
-            works=JSON.stringify(workers);
-            
+
+
+            works = JSON.stringify(workers);
+
             const mapContainer = document.getElementById('map');
             const mapURL = `https://www.google.com/maps/embed/v1/search?q=${locationData.areaName}+bangalore+near+petrol+station&key=AIzaSyAXL00iAw_hVkfvmzrodGl7-v1kA9sTno0`;
             const iframe = document.createElement('iframe');
@@ -76,7 +79,7 @@
             iframe.setAttribute('style', 'border:1px;');
             mapContainer.innerHTML = '';
             mapContainer.appendChild(iframe);
-        
+
         }
         add();
         // maps ka parts
@@ -84,8 +87,8 @@
 
         // worker list ka parts
         function displayworker(value) {
-            const filteredWorkers = workers.filter(worker => worker.occupation === value );
- 
+            const filteredWorkers = workers.filter(worker => worker.occupation === value);
+
             const display = document.getElementById("display");
             const table = document.createElement("table");
             const headerRow = document.createElement("tr");
@@ -114,7 +117,7 @@
                 const image = document.createElement("img");
                 image.src = worker.imageUrl;
                 image.alt = worker.name;
-                image.style.width = "50px"; 
+                image.style.width = "50px";
 
                 imageCell.appendChild(image);
 
@@ -122,14 +125,14 @@
                 row.appendChild(contactCell);
                 row.appendChild(imageCell);
                 row.addEventListener("click", () => {
-                    
+
                     window.location.href = `tel:${worker.contactNumber}`;
                 });
 
                 table.appendChild(row);
             });
 
-            display.innerHTML = ''; 
+            display.innerHTML = '';
             display.appendChild(table);
         }
         const bars = document.getElementById("bars");
@@ -141,17 +144,17 @@
             if (navitems.style.display === "flex") {
                 navitems.style.display = "none";
                 navbar.style.height = "0";
-                nav2.style.display="none";
-                navbar.classList.remove("open"); 
+                nav2.style.display = "none";
+                navbar.classList.remove("open");
             } else {
                 navitems.style.display = "flex";
                 navitems.style.color = "black";
                 navbar.style.height = "50vh";
-                nav2.style.display="flex";
-                navbar.classList.add("open"); 
+                nav2.style.display = "flex";
+                navbar.classList.add("open");
             }
         });
-  
+
 
     </script>
 </body>
